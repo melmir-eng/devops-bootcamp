@@ -1,14 +1,19 @@
 pipeline {
     agent any
-    //tool name: 'mohJ', type: 'nodejs'
     tools {
         nodejs 'mohJ'
     } 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'building your code'
                 sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests'
+                sh 'npm test'
             }
         }
     }
