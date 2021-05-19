@@ -53,7 +53,7 @@ describe('die attributes', () => {
   //   Validate that rolling a 1-sided die always returns 1
   it('should always return 1 when rolling a 1-sided die', () => {
     let die = new Die(1);
-    die.roll().should.equal(1);
+    die.roll().should.equal(0);
     die.roll().should.equal(1);
     die.roll().should.equal(1);
     die.roll().should.equal(1);
