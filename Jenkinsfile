@@ -9,9 +9,6 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh 'npm install'
-               //nodejs('mohJ') {
-               //     sh 'npm install'
-               //}
             }
         }
     }
