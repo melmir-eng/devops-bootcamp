@@ -16,5 +16,16 @@ pipeline {
                 sh 'npm test'
             }
         }
+        stage('Sonar') {
+            steps {
+                echo 'Running Sonar'
+                script {
+                    def scannerHome = tool 'mohJ';
+                    withSonarQubeEnv("fosslinxSonarqubeserver") {
+                        sh "${tool("mohJ")}/bin/sonar-scanner"
+                    }
+                }
+            }
+        }
     }
 }
