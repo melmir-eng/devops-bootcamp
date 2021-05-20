@@ -21,7 +21,7 @@ pipeline {
                 echo 'Running Sonar'
                 script {
                     def scannerHome = tool 'mohJ';
-                    withSonarQubeEnv("fosslinxSonarqubeserver") {
+                    withSonarQubeEnv("MohSonarScanner") {
                         sh "${tool("mohJ")}/bin/sonar-scanner"
                     }
                 }
